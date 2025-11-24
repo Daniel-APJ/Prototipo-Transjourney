@@ -1,0 +1,42 @@
+@import url(./celular.css);
+
+header {
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+
+.btn-voltar {
+    background-color: transparent;
+    color: var(--branco);
+    margin: 0 2rem;
+    padding: 0;
+    font-size: 2.2rem;
+}
+
+.logo {
+    font-size: 1.8em;
+    width: 44px;
+    height: 44px;
+    margin: 0 4rem;
+    background-color: var(--branco);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+main {
+    max-height: 80%;
+    font-size: .8rem;
+}
+
+button {
+    padding: .5em 2em;
+    margin: 10px 0;
+}
+
+a {
+    color: gray;
+    font-style: italic;
+    font-size: small;
+}

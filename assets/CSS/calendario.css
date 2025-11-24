@@ -1,0 +1,196 @@
+@import url(./celular.css);
+
+header {
+    display: flex;
+    padding: 35px 20px 15px 20px;
+    gap: 10%;
+    color: var(--branco);
+}
+
+.btn-voltar {
+    background: transparent;
+    color: var(--branco);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-voltar i {
+    scale: 2.5;
+}
+
+/*------- Calendário: ------*/
+#calendar {
+    max-width: 350px;
+    margin: 0 auto;
+    background: var(--azul-claro);
+    padding: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#calendar-header button {
+    border: none;
+    background: transparent;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+#weekdays {
+    background-color: var(--preto);
+    color: var(--branco); 
+    margin-top: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 10px;
+}
+
+#weekdays, #days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    justify-items: center; 
+}
+
+#days {
+    background: var(--branco);
+    max-width: 333px;
+    max-height: 405px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--azul) var(--branco);
+}
+
+#weekdays div {
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.day {
+    padding: 15px 0;
+    border-radius: 12px;
+    margin: 1px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    background: var(--azul-claro);
+    width: 42px;
+}
+
+.day:hover {
+    background: var(--rosa-claro);
+}
+
+.event {
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 6px;
+    display: block;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*------ Mensagem Menu: ------*/
+#popup {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    animation: fadeIn 0.5s ease;
+    display: none; 
+}
+
+#popup.show {
+    display: flex; 
+}
+
+.popup-box {
+    background: var(--branco);
+    width: 85%;
+    max-width: 240px;
+    padding: 20px;
+    border-radius: 18px;
+    animation: slideUp 0.5s ease;
+    text-align: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+    width: 30px;
+    transition: all 0.3s ease-in;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+.popup-botoes {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.action-btn {
+    width: 44px;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #fff;
+}
+
+.action-btn.medicamento {
+    background-color: var(--vermelho);
+}
+.action-btn.consulta {
+    background-color: var(--azul);
+}
+
+.action-btn:hover {
+    background: var(--azul-claro);
+    color: var(--preto);
+}
+
+.action-btn.danger {
+    background: var(--verde-claro);
+    color: var(--preto);
+    border: none;
+}
+
+.action-btn.danger:hover {
+    background: red;
+    color: var(--branco);
+}
+
+/*--- Animações para dar a impressão de pop-up mobile: ---*/
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0 }
+    to   { transform: translateY(0); opacity: 1 }
+}

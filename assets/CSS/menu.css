@@ -1,0 +1,205 @@
+@import url(./celular.css);
+
+.celular {
+    background-color: var(--preto);
+}
+
+header {
+    background-color: var(--verde-claro);
+    min-height: 40%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    gap: 10px;
+    padding: 30px 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.btn-burguer,
+.btn-burguer-back {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn-burguer,
+.btn-voltar,
+.btn-burguer-back {
+    color: var(--branco);
+    width: 44px;
+    height: 44px;
+    font-size: xx-large;
+    transition: all 0.3s;
+}
+
+.btn-burguer:active {
+    opacity: .5;
+}
+
+.foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--branco);
+}
+
+.foto {
+    position: relative;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 108px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.foto i {
+    font-size: 108px;
+    color: var(--branco);
+}
+
+.foto img {
+    position: absolute;
+    width: 100%;
+    border-radius: 50%;
+    display: none; /*Remover quando necessário*/
+}
+/*---------------------*/
+
+h3 {
+    color: var(--branco);
+    padding: 40px 10px 5px 10px;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.menu-container {
+    background-color: var(--branco);
+    min-height: 220px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 15px 30px;
+    justify-items: center;
+}
+
+.menu-container a {
+    background-color: var(--azul-claro);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--preto);
+    text-decoration: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-container a:nth-child(2) {
+    background-color: var(--azul-verde);
+}
+.menu-container a:nth-child(3) {
+    background-color: var(--azul-verde);
+}
+
+.icon-container {
+    background-color: var(--rosa-claro);
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    color: var(--branco);
+}
+
+.menu-container span {
+    font-size: 15px;
+}
+
+/*-------- Menu Lateral: ----------*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--verde-claro);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    background-color: var(--rosa-claro);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: var(--preto);
+}
+
+.sidebar.open {
+    width: 200px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+    z-index: 1;
+}
+
+.overlay.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.btn-burguer-back {
+    font-size: 44px;
+    margin-left: 25px;
+    margin-top: -10px;
+}
+
+.btn-burguer-back:active {
+    opacity: .5;
+}
+
+.btn-burguer.open {
+    display: none;
+}
+
+.logo {
+    width: 66px;
+    height: 66px;
+    background-color: var(--branco);
+    display: block;
+    margin: 40px auto;
+    border-radius: 5px;
+}

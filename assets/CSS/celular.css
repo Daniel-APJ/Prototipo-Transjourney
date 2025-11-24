@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --verde-claro: #00c2a8;
+  --azul-claro: #77E0E7;
+  --azul-verde: #77e5d7;
+  --rosa-claro: #EC909B;
+  --branco: #f0f0f0;
+  --azul: #5844cc;
+  --vermelho: #c04862;
+  --cinza-claro: rgb(201, 201, 201);
+  --fonte: 'Poppins', sans-serif;
+  --preto: #333333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte);
+}
+
+body {
+  background: linear-gradient(45deg, cyan, darkblue);
+  height: 110vh;
+}
+
+.celular {
+  height: 640px;
+  width: 360px;
+  border: 8px solid #101010;
+  margin: 5% auto;
+  border-radius: 20px;
+  background-color: lightseagreen;
+  position: relative;
+  overflow: hidden;
+}
+
+.botoes-celular {
+  width: 100%;
+  background-color: black;
+  opacity: .5;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  z-index: 10;
+}
+
+.topo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chao {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+}
+
+.chao i:first-child {
+  transform: scaleX(-1)
+}
