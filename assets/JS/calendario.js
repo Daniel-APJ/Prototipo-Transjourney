@@ -1,3 +1,6 @@
+//console.log(eventosDoBanco);  //Desabilitado pela falta de banco de dados, use para testes
+
+
 let date = new Date();
 const monthYear = document.getElementById("month-year");
 const daysDiv = document.getElementById("days");
@@ -22,8 +25,6 @@ function renderCalendar() {
     }
 
     for (let d = 1; d <= lastDay; d++) {
-        /*const dataClick = d + " / " + (month + 1) + " / " + year;
-        console.log(dataClick);*/
         daysDiv.innerHTML += `
             <div class="day" onclick="openDay(${d})">
                 ${d}
@@ -44,7 +45,7 @@ document.getElementById("next").onclick = () => {
 };
 
 function openDay(day) {
-    showPopup(day);
+    showPopup(`Dia ${day}`);
 }
 
 renderCalendar();

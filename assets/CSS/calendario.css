@@ -67,7 +67,7 @@ header {
     max-height: 405px;
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: var(--azul) var(--branco);
+    scrollbar-color: var(--azul-forte) var(--branco);
 }
 
 #weekdays div {

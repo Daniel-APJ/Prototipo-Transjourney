@@ -4,13 +4,16 @@
   --verde-claro: #00c2a8;
   --azul-claro: #77E0E7;
   --azul-verde: #77e5d7;
+  --seagreen: lightseagreen;
   --rosa-claro: #EC909B;
   --branco: #f0f0f0;
   --azul: #5844cc;
+  --azul-forte: #0eaac5;
   --vermelho: #c04862;
   --cinza-claro: rgb(201, 201, 201);
   --fonte: 'Poppins', sans-serif;
   --preto: #333333;
+  --max-h-main: 546px /*600px do celular - 94px do header*/
 }
 
 * {
@@ -31,7 +34,7 @@ body {
   border: 8px solid #101010;
   margin: 5% auto;
   border-radius: 20px;
-  background-color: lightseagreen;
+  background-color: var(--seagreen);
   position: relative;
   overflow: hidden;
 }

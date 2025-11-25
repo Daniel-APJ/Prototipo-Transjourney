@@ -1,5 +1,6 @@
 @import url(./celular.css);
 
+/* ---------- HEADER ---------- */
 header {
     display: flex;
     padding: 35px 20px 15px 20px;
@@ -12,6 +13,7 @@ h1 {
     font-size: 23px;
 }
 
+/* Botão voltar */
 .btn-voltar {
     background: transparent;
     color: var(--branco);
@@ -27,8 +29,256 @@ h1 {
     scale: 2.2;
 }
 
+/* ---------- MAIN ---------- */
 main {
     background-color: var(--preto);
-    height: 100%;
+    max-height: var(--max-h-main);
+    padding: 10px 5px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+/* ---------- Tipo de consulta: ---------- */
+.tipo-consulta {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10px;
+    margin-bottom: 15px;
+    padding: 5px 0;
+    background-color: var(--branco);
+    border-radius: 25px;
+}
+
+.tipo-consulta .opcao {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tipo-consulta input[type="radio"] {
+    display: none;
+}
+
+.tipo-consulta .opcao span {
+    color: var(--preto);
+    font-size: 12px;
+}
+
+.tipo-consulta .opcao:hover {
+    background-color: var(--cinza-claro);
+    
+}
+
+.tipo-consulta input:checked + span {
+    font-weight: bold;
+    color: var(--preto);
+}
+
+.tipo-consulta input:checked + span:after {
+    content: "✓";
+    padding-left: 5px;
+}
+
+/* ---------- Seleção de Datas ---------- */
+.data-consulta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.data-consulta button {
+    background: transparent;
+    color: var(--branco);
+    border: none;
+    border-radius: 50%;
+    font-size: 26px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.data-consulta button:hover {
+    color: var(--azul);
+    border-radius: 10px;
+    font-size: 35px;
+}
+
+.dias {
+    display: flex;
+    border-radius: 15px;
+    background-color: var(--branco);
+    overflow: hidden;
+}
+
+.dia {
+    background: transparent;
+    padding: 9px 12px;
+    text-align: center;
+    width: 75px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dia p {
+    color: var(--preto);
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.dia span {
+    font-size: 12px;
+    color: var(--preto);
+}
+
+.dia.ativo {
+    background: var(--azul);
+}
+
+.dia:hover {
+    background: var(--azul-verde);
+}
+
+.dia.ativo span,
+.dia.ativo p {
+    color: var(--branco);
+}
+
+/* ---------- Container principal ---------- */
+.container {
+    background-color: var(--branco);
+    margin: 5px 10px;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.caixa {
+    background: var(--azul-claro);
     padding: 10px 15px;
+    border-radius: 18px;
+    color: var(--preto);
+}
+
+.caixa h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.caixa h4 {
+    font-weight: normal;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* ---------- Turnos: ---------- */
+.turnos {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.turno {
+    flex: 1;
+    margin: 0 5px;
+    background-color: var(--azul-forte);
+    padding: 8px 10px;
+    border-radius: 20px;
+    color: var(--preto);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+.turno.ativo {
+    background: var(--azul);
+    font-weight: bold;
+    color: var(--branco);
+}
+
+/* ---------- Horários ---------- */
+.horarios {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin: 10px 0;
+}
+
+.hora {
+    background: var(--azul-forte);
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    color: var(--preto);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.hora.ativo,
+.hora:hover {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+/* ---------- Lista de médicos ---------- */
+.lista-medicos {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.medico {
+    background: var(--azul-forte);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.medico:hover {
+    background: var(--azul);
+}
+
+.medico.ativo {
+    background: var(--azul);
+    border: 2px solid var(--branco);
+}
+
+/* Ícone M1, M2, M3 */
+.medico .icone {
+    background: var(--azul);
+    color: var(--branco);
+    border-radius: 50%;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.medico:hover .icone {
+    background: var(--preto);
+}
+
+.icone img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Scrollbar custom */
+.lista-medicos::-webkit-scrollbar {
+    width: 6px;
+}
+.lista-medicos::-webkit-scrollbar-thumb {
+    background: var(--cinza);
+    border-radius: 10px;
 }
