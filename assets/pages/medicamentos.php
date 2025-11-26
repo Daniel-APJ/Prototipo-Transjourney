@@ -12,7 +12,7 @@
         <div class="botoes-celular topo"></div>
 
         <header>
-            <a href="../pages/calendario.html" class="btn-voltar" id="btnVoltar">
+            <a href="../pages/calendario.php" class="btn-voltar" id="btnVoltar">
                 <i class="fa-solid fa-circle-left"></i>
             </a>
             <h1>Medicamentos</h1>

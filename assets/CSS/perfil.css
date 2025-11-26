@@ -1,0 +1,151 @@
+@import url(./celular.css);
+
+.celular {
+    background-color: var(--preto);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px 15px;
+    align-items: center;
+    color: var(--branco);
+}
+
+header a, header button {
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 33px;
+    cursor: pointer;
+}
+
+/* Esconder botões */
+.hidden {
+    display: none !important;
+}
+
+/* Perfil: */
+.header-perfil {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--seagreen);
+}
+
+.header-perfil > div:first-child {
+    position: relative;
+    margin: 0 auto;
+}
+
+.header-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--seagreen);
+    cursor: pointer;
+}
+
+.header-perfil input[type="file"] {
+    display: none;
+}
+
+/* Conteúdo principal: */
+main {
+    max-height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--seagreen) var(--preto);
+    color: var(--branco);
+}
+
+.descricao {
+    text-align: center;
+}
+
+.descricao h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.descricao h3 {
+    margin: 3px 0;
+    font-size: 15px;
+}
+
+.descricao p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Formulário:  */
+.infos-perfil {
+    padding: 10px 20px;
+}
+
+.grid-infos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/*.grid-infos {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-width: 360px;
+}
+
+label:first-child { grid-area: 1 / 1 / 2 / 2; }
+label:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+label:nth-child(3) { grid-area: 2 / 1 / 4 / 2; }
+label:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }
+label:last-child { grid-area: 3 / 2 / 4 / 3; }
+*/
+label {
+    font-size: 14px;
+    background-color: var(--azul-claro);
+    color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+label:first-child { width: 55%; }
+label:nth-child(2) { width: 30%; }
+label:nth-child(3) { width: 80%; }
+label:nth-child(4) { width: 30%; }
+label:last-child { width: 30%; }
+
+label input {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 12px;
+    background: var(--cinza-claro);
+    transition: 0.3s;
+}
+
+label:nth-child(3) input {
+    margin-top: 10px;
+}
+
+/* Inputs desabilitados ficam “apagados” */
+label input:disabled {
+    background: var(--branco);
+    cursor: not-allowed;
+}
+
+/* Inputs editáveis mudam cor */
+label input:not(:disabled) {
+    background: var(--branco);
+    border-color: var(--azul);
+    box-shadow: 0px 0px 5px rgb(74 144 226 / 40%);
+}

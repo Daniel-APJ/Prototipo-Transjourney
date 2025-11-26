@@ -5,7 +5,7 @@
 
 const diasDiv = document.getElementById("diasConsulta");
 
-const hoje = new Date();
+const hoje = new Date(); //Alterar para pegar o valor do dia que foi selecionado na página de calendário
 
 function formatarData(d) {
     return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });

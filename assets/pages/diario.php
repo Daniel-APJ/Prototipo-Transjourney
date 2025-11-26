@@ -41,16 +41,15 @@ $escolhida = $frases[array_rand($frases)];
             <div class="popup-box">
                 <button class="close-btn" onclick="closePopup()">✕</button>
                 <div class="popup-botoes">
-                    <a id="addEntrada" href="./regDiario.php">Registrar um novo sentimento</a>
-                    <a href="./editDiario.php">Editar uma reflexão</a>
-                    <a href="./confDiario.php">Conferir reflexões</a>
+                    <a id="addEntrada" href="./editarDiario.php">Registrar um novo sentimento</a>
+                    <a href="./gerenciarDiario.php?modo=editar&id=1">Conferir reflexões</a>
                 </div>
             </div>
         </div>
 
         <!-- FOOTER -->
         <footer>
-            <a href="../pages/calendario.html" class="btn-voltar" id="btnVoltar">
+            <a href="../pages/menu.php" class="btn-voltar" id="btnVoltar">
                 <i class="fa-solid fa-circle-left"></i>
             </a>
             <h1>DIÁRIO</h1>

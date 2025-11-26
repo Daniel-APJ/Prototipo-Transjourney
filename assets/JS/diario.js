@@ -39,6 +39,9 @@ function carregarEntradas() {
                 <p class="titulo">${ent.titulo}</p>
                 <p class="texto">${ent.texto}</p>
                 <p class="texto"><b>Reflexão:</b> ${ent.reflexao}</p>
+                <a href="./editarDiario.php?modo=criar">
+                    <i class="fa-solid fa-pencil"></i>
+                </a>
             </div>
         `;
     });

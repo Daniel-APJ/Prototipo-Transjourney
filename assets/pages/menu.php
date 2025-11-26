@@ -32,10 +32,10 @@ $nome = $_SESSION['nome_social'];
                     <button class="btn-burguer-back" id="btnBurgerBack">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
-                    <a href="./editar_perfil.php">Editar Perfil</a>
-                    <a href="./config.php">Configurações</a>
-                    <a href="./ajuda.php">Ajuda</a>
-                    <a href="./termos.php">Termos de Uso</a>
+                    <a href="./perfil.php">Editar Perfil</a>
+                    <a href="./template.html">Configurações</a>
+                    <a href="./template.html">Ajuda</a>
+                    <a href="./template.html">Termos de Uso</a>
                     <a href="../../backend/php/logout.php">Log Out</a>
                     <div>
                         <span class="logo"></span>
@@ -69,7 +69,7 @@ $nome = $_SESSION['nome_social'];
                     </div>
                     <span>Histórico</span>
                 </a>
-                <a href="./fotografias.php">
+                <a href="./galeria.php">
                     <div class="icon-container">
                         <i class="fa-solid fa-camera"></i>
                     </div>

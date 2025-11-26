@@ -60,7 +60,7 @@ main {
 
 .card-diario:hover {
     transform: scale(1.05); /* Cresce sem empurrar nada */
-    z-index: 10; /* Fica por cima dos outros */
+    z-index: 3; /* Fica por cima dos outros */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -95,6 +95,14 @@ main {
     right: 10px;
     top: 10px;
     font-size: 20px;
+}
+
+.card-diario a {
+    text-decoration: none;
+    color: var(--preto);
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
 }
 
 /* ---------- FOOTER ---------- */
@@ -158,9 +166,9 @@ footer i {
 }
 
 .popup-box {
-    background: var(--branco);
+    background: var(--verde-claro);
     width: 85%;
-    max-width: 240px;
+    max-width: 275px;
     padding: 20px;
     border-radius: 18px;
     animation: slideUp 0.5s ease;
@@ -185,8 +193,29 @@ footer i {
 
 .popup-botoes {
     display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
+    margin-top: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: smaller;
+}
+
+.popup-botoes a {
+    margin: 5px 0;
+    text-decoration: none;
+    background-color: var(--azul);
+    padding: 5px 10px;
+    color: var(--branco);
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.popup-botoes a:hover {
+    transform: scale(1.05); 
+    z-index: 3; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    background-color: var(--azul-verde);
+    color: var(--preto);
 }
 
 /*--- Animações para dar a impressão de pop-up mobile: ---*/

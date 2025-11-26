@@ -1,0 +1,134 @@
+/* Importação do layout base do celular */
+@import url(./celular.css);
+
+/* ---------- HEADER ---------- */
+header {
+    display: flex;
+    padding: 35px 20px 15px 20px;
+    gap: 10%;
+    color: var(--branco);
+    align-items: center;
+}
+
+h1 {
+    font-size: 23px;
+}
+
+.btn-voltar {
+    background: transparent;
+    color: var(--branco);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-voltar i {
+    scale: 2.2;
+}
+
+/* ---------- MAIN ---------- */
+main {
+    background: var(--preto);
+    height: 500px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+/* Caixa do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+/* Campos */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    color: var(--branco);
+    font-size: 14px;
+}
+
+input[type="date"], 
+input[type="text"],
+textarea {
+    background: var(--cinza-escuro);
+    border: none;
+    color: var(--branco);
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 15px;
+    outline: none;
+    resize: none;
+}
+
+/* Ajuste específico para textarea */
+textarea {
+    min-height: 110px;
+    line-height: 1.4;
+}
+
+/* ---------- Seletor de Emojis ---------- */
+.emoji-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.emoji-item {
+    font-size: 28px;
+    padding: 10px;
+    background: var(--cinza-escuro);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.emoji-item:hover {
+    background: var(--azul-claro);
+    transform: scale(1.1);
+}
+
+.emoji-item.ativo {
+    border: 2px solid var(--azul);
+    background: var(--cinza);
+    transform: scale(1.15);
+}
+
+/* Botão */
+button[type="submit"] {
+    margin-top: 10px;
+    background: var(--azul);
+    border: none;
+    padding: 12px;
+    border-radius: 16px;
+    color: var(--branco);
+    font-size: 17px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: var(--azul-claro);
+    filter: brightness(1.1);
+}
+
+/* Scrollbar */
+main::-webkit-scrollbar {
+    width: 7px;
+}
+main::-webkit-scrollbar-thumb {
+    background: var(--cinza);
+    border-radius: 10px;
+}
