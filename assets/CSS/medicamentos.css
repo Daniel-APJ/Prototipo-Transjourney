@@ -15,7 +15,7 @@ h1 {
 main {
     background-color: var(--preto);
     padding-top: 15px;
-    height: 75%;
+    height: 74.4%;
 }
 
 .btn-voltar {
@@ -33,7 +33,6 @@ main {
     scale: 2.5;
 }
 
-/*Área dos botões extras*/
 .lista-btn-add {
     display: flex;
     flex-direction: column;
@@ -56,7 +55,6 @@ main {
     cursor: pointer;
 }
 
-/* Lista */
 .lista-medicamentos {
     max-width: 360px;
     overflow-x: scroll;
@@ -76,22 +74,41 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+}
+
+.medicamento-item strong {
+    font-size: 17px;
+}
+
+.medicamento-item.tomado {
+    background-color: var(--verde-claro) !important; 
+    color: var(--branco);
+}
+
+.medicamento-item.selecionado {
+    border-color: var(--azul); 
+    opacity: 0.7;
+}
+
+.medicamento-item.tomado .medicamento-meta,
+.medicamento-item.tomado strong {
+    color: var(--branco) !important;
 }
 
 .banner-remedio {
     width: 86px;
     height: 86px;
-    border: 1px dashed;
+    border: 2px solid var(--vermelho);
     margin: 5px 8px;
     border-radius: 10px;
+    overflow: hidden;
 }   
 
 .banner-remedio img {
     width: 100%;
-}
-
-.medicamento-item strong {
-    font-size: 17px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .medicamento-meta {
@@ -118,7 +135,6 @@ main {
     align-items: center;
 }
 
-/* Popup */
 .popup {
     position: absolute;
     top: 0; 
@@ -188,7 +204,7 @@ main {
 }
 
 .popup-box label input {
-    padding: 0;
+    padding: 5px 10px;
     width: auto;
     margin-top: 10px;
     margin-left: 10px;
@@ -199,10 +215,11 @@ main {
     padding: 12px;
     width: 100%;
     background: var(--vermelho);
-    color: white;
+    color: var(--branco);
     border: none;
     border-radius: 14px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 @keyframes slideUp {

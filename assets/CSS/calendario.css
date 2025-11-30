@@ -194,3 +194,34 @@ header {
     from { transform: translateY(20px); opacity: 0 }
     to   { transform: translateY(0); opacity: 1 }
 }
+
+/* Remove o estilo antigo de .event se não for mais usar */
+.event {
+    display: none;
+}
+
+/* Garante que o dia seja a referência de posição */
+.day {
+    position: relative; 
+}
+
+/* Estilo base da bolinha */
+.dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    bottom: 5px; 
+}
+
+/* Bolinha Vermelha (Esquerda) - Medicamento */
+.dot.medicamento {
+    left: 5px;
+    background-color: var(--vermelho); 
+}
+
+/* Bolinha Azul (Direita) - Consulta */
+.dot.consulta {
+    right: 5px;
+    background-color: var(--azul); 
+}

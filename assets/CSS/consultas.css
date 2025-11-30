@@ -249,11 +249,11 @@ main {
 
 .medico.ativo {
     background: var(--azul);
-    border: 2px solid var(--branco);
+    border: 2px solid var(--vermelho);
 }
 
 /* Ícone M1, M2, M3 */
-.medico .icone {
+.icone {
     background: var(--azul);
     color: var(--branco);
     border-radius: 50%;
@@ -263,6 +263,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .medico:hover .icone {
@@ -271,6 +272,8 @@ main {
 
 .icone img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 

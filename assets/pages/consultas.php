@@ -1,8 +1,6 @@
-<!--
 <?php
 require "../../backend/php/auth.php"; // garante login do usuário
 ?>
--->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -81,6 +79,6 @@ require "../../backend/php/auth.php"; // garante login do usuário
         </div>
     </div>
 
-    <script src="../JS/consultas.js"></script>
+    <script src="../JS/consultas.js?v=<?= time() ?>"></script>
 </body>
 </html>

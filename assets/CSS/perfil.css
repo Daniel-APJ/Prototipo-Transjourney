@@ -89,7 +89,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 /*.grid-infos {
@@ -120,9 +120,8 @@ label {
 
 label:first-child { width: 55%; }
 label:nth-child(2) { width: 30%; }
-label:nth-child(3) { width: 80%; }
-label:nth-child(4) { width: 30%; }
-label:last-child { width: 30%; }
+label:nth-child(3) { width: 50%; }
+.imc { width: 40%; }
 
 label input {
     padding: 5px 10px;
@@ -148,4 +147,15 @@ label input:not(:disabled) {
     background: var(--branco);
     border-color: var(--azul);
     box-shadow: 0px 0px 5px rgb(74 144 226 / 40%);
+}
+
+.imc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imc label {
+    width: 6rem;
 }

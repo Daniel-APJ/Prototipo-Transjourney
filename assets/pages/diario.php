@@ -1,15 +1,29 @@
 <?php
-require "../../backend/php/auth.php"; // Protege a página
+require "../../backend/php/conexao.php";
+require "../../backend/php/auth.php";
 
-// Exemplo de frases motivacionais (depois deve puxar do banco)
+$uid = $_SESSION['usuario_id'];
+
+// Frases motivacionais (virá do banco depois, mantendo array por enquanto)
 $frases = [
     ["O Nosso Destino Não Oferece A Taça Do Desespero, Mas, Sim, O Cálice Da Oportunidade.", "Richard Nixon"],
     ["Seja forte o suficiente para recomeçar sempre que necessário.", "Desconhecido"],
     ["A jornada é sua. Concentre-se em progredir, não em ser perfeito.", "Desconhecido"]
-    //Tá para colocar a frase em uma célula e o autor em outra, assim fica fácil de transformar em array
 ];
-
 $escolhida = $frases[array_rand($frases)];
+
+$sql = $conn->query("SELECT * FROM diario WHERE usuario_id = $uid ORDER BY data_registro DESC");
+
+$entradas = [];
+while ($row = $sql->fetch_assoc()) {
+    $entradas[] = [
+        "id" => $row['id'], 
+        "data" => date('d/m/Y', strtotime($row['data_registro'])),
+        "texto" => $row['texto'], 
+        "reflexao" => $row['reflexao'],
+        "emoji" => $row['emoji']
+    ];
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +39,6 @@ $escolhida = $frases[array_rand($frases)];
     <div class="celular">
         <div class="botoes-celular topo"></div>
 
-        <!-- HEADER -->
         <header>
             <div class="quote-box">
                 <p><?= $escolhida[0] ?></p>
@@ -34,20 +47,17 @@ $escolhida = $frases[array_rand($frases)];
         </header>
 
         <main id="listaDiario">
-            <!-- O resto é preenchido pelo JS -->
-        </main>
+            </main>
 
         <div id="popup">
             <div class="popup-box">
                 <button class="close-btn" onclick="closePopup()">✕</button>
                 <div class="popup-botoes">
-                    <a id="addEntrada" href="./editarDiario.php">Registrar um novo sentimento</a>
-                    <a href="./gerenciarDiario.php?modo=editar&id=1">Conferir reflexões</a>
+                    <a id="addEntrada" href="./editarDiario.php?modo=criar">Registrar um novo sentimento</a>
                 </div>
             </div>
         </div>
 
-        <!-- FOOTER -->
         <footer>
             <a href="../pages/menu.php" class="btn-voltar" id="btnVoltar">
                 <i class="fa-solid fa-circle-left"></i>
@@ -59,12 +69,13 @@ $escolhida = $frases[array_rand($frases)];
         </footer>
 
         <div class="botoes-celular chao">
-            <i class="fa-solid fa-play"></i>
-            <i class="fa-solid fa-circle"></i>
-            <i class="fa-solid fa-square-full"></i>
+            <i class="fa-solid fa-play"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-square-full"></i>
         </div>
     </div>
 
-    <script src="../JS/diario.js"></script>
+    <script>
+        const entradasDoBanco = <?= json_encode($entradas) ?>;
+    </script>
+    <script src="../JS/diario.js?v=<?= time() ?>"></script>
 </body>
 </html>

@@ -53,10 +53,10 @@ echo "<script>
                     <button class="close-btn" onclick="closePopup()">✕</button>
                     <p id="popup-msg"></p>
                     <div class="popup-botoes">
-                        <a href="./medicamentos.php" class="action-btn medicamento" onclick="addMedicamento()">
+                        <a href="javascript:void(0)" class="action-btn medicamento" onclick="addMedicamento()">
                             <i class="fa-solid fa-pills"></i>
                         </a>
-                        <a href="./consultas.php" class="action-btn consulta" onclick="addConsulta()">
+                        <a href="javascript:void(0)" class="action-btn consulta" onclick="addConsulta()">
                             <i class="fa-solid fa-notes-medical"></i>
                         </a>
                         <button class="action-btn danger" onclick="removerItem()">
@@ -91,6 +91,6 @@ echo "<script>
         </div>
     </div>
 
-    <script src="../JS/calendario.js"></script>
+    <script src="../JS/calendario.js?v=<?= time() ?>"></script>
 </body>
 </html>

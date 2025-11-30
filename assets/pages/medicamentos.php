@@ -45,7 +45,7 @@
                 <!--
                 Adicionar Medicação (03.2.1): registrar uma nova medicação. 
                 Registrar Dose (03.2.2): informar tipo, quantidade e data; sistema gera lembrete automático. -->
-                <button class="add-btn" onclick="openDosePopup()">✓ Registrar Dose</button>
+                <button class="add-btn" onclick="registrarDoseSelecionada()">✓ Registrar Dose</button>
                 <button class="add-btn" onclick="openMedicamentoPopup()">+ Adicionar Medicamento</button>
             </section>
         </main>
@@ -55,15 +55,39 @@
             <div class="popup-box">
                 <button class="close-btn" onclick="closeMedicamentoPopup()">✕</button>
                 <h3>Novo Medicamento</h3>
+                
                 <input type="text" id="nome" placeholder="Nome do medicamento">
                 <input type="text" id="dose" placeholder="Dosagem (ex: 2ml)">
                 <input type="time" id="hora">
+                
                 <select id="frequencia">
                     <option value="Diário">Diário</option>
                     <option value="Alternado">Alternado</option>
                     <option value="Semanal">Semanal</option>
                 </select>
-                <label><input type="checkbox" id="notificar"> Enviar lembrete</label>
+
+                <div style="text-align: left; margin-top: 10px;">
+                    <label style="display:block; font-size:12px; color:gray; margin-bottom:5px;">Início do Tratamento:
+                        <input type="date" id="data_inicio" style="width:100%; margin-top:2px;">
+                    </label>
+                </div>
+
+                <div style="text-align: left; margin-top: 5px;">
+                    <label style="display:flex; align-items:center; width:100%; margin: 25px 0 10px;">
+                        <input type="checkbox" id="uso_continuo" style="width:auto; margin:0 10px 0 0;"> 
+                        Uso Contínuo
+                    </label>
+                    
+                    <label id="labelDataFim" style="display:block; font-size:12px; color:gray;">Data Final:
+                        <input type="date" id="data_fim" style="width:100%; margin-top:2px;">
+                    </label>
+                </div>
+
+                <label style="display:flex; align-items:center; margin: 25px 0 10px;">
+                    <input type="checkbox" id="notificar" style="width:auto; margin:0 10px 0 0;"> 
+                    Enviar lembrete
+                </label>
+                
                 <button class="salvar" onclick="salvarMedicamento()">Salvar</button>
             </div>
         </div>
@@ -74,6 +98,6 @@
             <i class="fa-solid fa-square-full"></i>
         </div>
     </div>
-    <script src="../JS/medicamentos.js"></script>
+    <script src="../JS/medicamentos.js?v=<?= time() ?>"></script>
 </body>
 </html>

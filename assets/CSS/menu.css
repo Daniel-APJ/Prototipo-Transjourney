@@ -4,6 +4,25 @@
     background-color: var(--preto);
 }
 
+.logo {
+    background-color: var(--branco);
+    margin: 15% auto;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 3em;
+    width: 1.5em;
+    height: auto;
+    font-weight: bold;
+}
+
+.logo span:nth-child(1) {
+    color: var(--azul-claro);
+}
+
+.logo span:nth-child(2) {
+    color: var(--rosa-claro);
+}
+
 header {
     background-color: var(--verde-claro);
     min-height: 40%;
