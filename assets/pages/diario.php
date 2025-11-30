@@ -55,6 +55,9 @@ while ($row = $sql->fetch_assoc()) {
                 <div class="popup-botoes">
                     <a id="addEntrada" href="./editarDiario.php?modo=criar">Registrar um novo sentimento</a>
                 </div>
+                <div class="popup-botoes">
+                    <a id="statusDiario" href="./template.html">Estatísticas</a>
+                </div>
             </div>
         </div>
 

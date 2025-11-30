@@ -173,6 +173,7 @@ footer i {
     border-radius: 18px;
     animation: slideUp 0.5s ease;
     text-align: center;
+    position: relative;
 }
 
 .close-btn {
@@ -184,6 +185,9 @@ footer i {
     width: 30px;
     transition: all 0.3s ease-in;
     border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 .close-btn:hover {
@@ -193,17 +197,17 @@ footer i {
 
 .popup-botoes {
     display: flex;
-    margin-top: 20px;
     align-items: flex-start;
     flex-direction: column;
     font-size: smaller;
+    margin: 10px 0;
 }
 
 .popup-botoes a {
     margin: 5px 0;
     text-decoration: none;
     background-color: var(--azul);
-    padding: 5px 10px;
+    padding: 10px 15px;
     color: var(--branco);
     border-radius: 10px;
     position: relative;

@@ -148,6 +148,6 @@ main::-webkit-scrollbar {
     width: 5px;
 }
 main::-webkit-scrollbar-thumb {
-    background: var(--preto);
+    background: transparent;
     border-radius: 10px;
 }
